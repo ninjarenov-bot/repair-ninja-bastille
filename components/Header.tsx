@@ -9,7 +9,7 @@ const navLinks = [
   { href: '/reparation-smartphone-paris-4', label: 'Smartphone' },
   { href: '/reparation-macbook-bastille', label: 'MacBook' },
   { href: '/reparation-tablette-paris-11', label: 'Tablette' },
-  { href: '/achat-revente', label: '💶 Achat-Revente' },
+  { href: '/achat-revente', label: 'Achat-Revente' },
   { href: '/services-pro', label: 'Pro & B2B' },
   { href: '/blog', label: 'Blog' },
 ]
@@ -61,13 +61,13 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <ul className="hidden lg:flex items-center gap-0.5 list-none m-0 p-0">
+        <ul className="hidden xl:flex items-center gap-0.5 list-none m-0 p-0">
           {navLinks.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-gray-300 hover:text-white font-medium px-4 py-2 rounded-lg
-                           hover:bg-white/10 transition-colors text-sm"
+                className="text-gray-300 hover:text-white font-medium px-2.5 py-2 rounded-lg
+                           hover:bg-white/10 transition-colors text-sm whitespace-nowrap"
               >
                 {link.label}
               </Link>
@@ -76,16 +76,16 @@ export default function Header() {
         </ul>
 
         {/* CTA Desktop — style CalFix */}
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="hidden xl:flex items-center gap-2">
           <a href="tel:+33750008410"
-             className="text-gray-300 hover:text-white font-medium text-sm px-3 py-2
-                        transition-colors hover:bg-white/10 rounded-lg">
+             className="text-gray-300 hover:text-white font-medium text-sm px-2.5 py-2
+                        transition-colors hover:bg-white/10 rounded-lg whitespace-nowrap">
             📞 Appeler
           </a>
           <Link
             href="/contact-rendez-vous"
             className="flex items-center gap-2 bg-white text-gray-900 font-bold
-                       text-sm px-5 py-2.5 rounded-full hover:bg-gray-100 transition-all"
+                       text-sm px-4 py-2.5 rounded-full hover:bg-gray-100 transition-all whitespace-nowrap"
           >
             CONTACT
             <span className="w-6 h-6 bg-ninja-red rounded-full flex items-center justify-center text-white text-xs">
@@ -96,7 +96,7 @@ export default function Header() {
 
         {/* Burger mobile */}
         <button
-          className="lg:hidden text-white p-2 rounded-lg hover:bg-white/10"
+          className="xl:hidden text-white p-2 rounded-lg hover:bg-white/10"
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-label="Menu navigation"
@@ -112,7 +112,7 @@ export default function Header() {
 
       {/* Menu mobile */}
       {open && (
-        <div className="lg:hidden bg-[#1a1a1a] border-t border-white/10 px-4 pb-4">
+        <div className="xl:hidden bg-[#1a1a1a] border-t border-white/10 px-4 pb-4">
           <ul className="flex flex-col gap-1 pt-2 list-none m-0 p-0">
             {navLinks.map((link) => (
               <li key={link.href}>
