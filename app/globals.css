@@ -1,0 +1,79 @@
+/* Rôle SEO : thème clair + typographie premium = Core Web Vitals optimaux + lisibilité */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root { --font-inter: 'Inter', system-ui, sans-serif; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    @apply bg-white text-gray-900 antialiased;
+    font-family: var(--font-inter);
+  }
+
+  h1 { @apply text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight tracking-tight; }
+  h2 { @apply text-xl sm:text-2xl md:text-4xl font-bold leading-tight; }
+  h3 { @apply text-lg sm:text-xl md:text-2xl font-semibold; }
+
+  a:focus-visible { @apply outline-2 outline-offset-2 outline-ninja-red rounded; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-ninja-red text-white font-bold
+           px-6 py-3 rounded-full hover:bg-ninja-accent transition-all duration-200
+           shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-dark {
+    @apply inline-flex items-center gap-2 bg-gray-900 text-white font-bold
+           px-6 py-3 rounded-full hover:bg-gray-700 transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 bg-white text-ninja-red font-bold
+           border-2 border-ninja-red px-6 py-3 rounded-full
+           hover:bg-ninja-red hover:text-white transition-all duration-200;
+  }
+
+  .badge-trust {
+    @apply inline-flex items-center gap-1.5 bg-gray-100 text-gray-700
+           text-sm font-medium px-3 py-1.5 rounded-full border border-gray-200;
+  }
+
+  .badge-trust-white {
+    @apply inline-flex items-center gap-1.5 bg-white/15 backdrop-blur-sm
+           text-white text-sm font-medium px-3 py-1.5 rounded-full border border-white/25;
+  }
+
+  .card-service {
+    @apply bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg
+           transition-all duration-300 hover:-translate-y-1 border border-gray-100;
+  }
+
+  .card-repair {
+    @apply bg-white rounded-2xl overflow-hidden border border-gray-100
+           shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .star-gold { @apply text-amber-400 text-lg leading-none; }
+  .section-pad { @apply py-10 sm:py-14 md:py-24 px-4; }
+  .container-site { @apply max-w-6xl mx-auto; }
+  .section-label { @apply text-ninja-red font-semibold uppercase tracking-widest text-xs md:text-sm; }
+
+  .feature-card {
+    @apply bg-white rounded-2xl p-6 border border-gray-100 shadow-sm;
+  }
+}
+
+.floating-cta-shadow { box-shadow: 0 8px 32px rgba(232,0,45,0.30); }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #f5f5f5; }
+::-webkit-scrollbar-thumb { background: #E8002D; border-radius: 3px; }
+
+.hero-overlay {
+  background: linear-gradient(105deg, rgba(10,10,10,0.88) 0%, rgba(10,10,10,0.60) 55%, rgba(10,10,10,0.25) 100%);
+}
