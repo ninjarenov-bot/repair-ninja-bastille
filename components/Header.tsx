@@ -44,12 +44,12 @@ export default function Header() {
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-          <div className="w-10 h-10 relative flex-shrink-0">
+          <div className="w-16 h-16 relative flex-shrink-0 rounded-full border-2 border-white shadow-md overflow-hidden">
             <Image
               src="/logo.png"
               alt="Repair Ninja Bastille"
               fill
-              className="object-contain"
+              className="object-cover"
             />
           </div>
           <span className="font-extrabold text-white text-lg leading-tight">
