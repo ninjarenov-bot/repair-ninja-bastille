@@ -1,6 +1,7 @@
 // Rôle SEO : page d'accueil H1 unique + mots-clés géolocalisés + structure CalFix = top ranking local
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import GoogleReviews from '@/components/GoogleReviews'
 import MapSection from '@/components/MapSection'
 
@@ -360,16 +361,16 @@ export default function HomePage() {
                 Déposez votre appareil — il repart réparé, sans mauvaise surprise sur la facture.
               </p>
 
-              {/* Image placeholder technicien */}
-              <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800 h-52 md:h-64
-                              flex items-center justify-center border border-gray-200">
-                <div className="text-center text-white/60">
-                  <div className="text-6xl mb-3">🔧</div>
-                  <p className="text-sm">
-                    Remplacer par une photo de votre atelier<br />
-                    <span className="text-xs">/public/images/atelier.jpg</span>
-                  </p>
-                </div>
+              {/* Photo atelier */}
+              <div className="rounded-2xl overflow-hidden relative h-52 md:h-64 border border-gray-200 shadow-md">
+                <Image
+                  src="/atelier.png"
+                  alt="Technicien Repair Ninja en train de réparer un iPhone à Bastille Paris 4"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
               </div>
             </div>
 
