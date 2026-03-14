@@ -362,13 +362,13 @@ export default function HomePage() {
               </p>
 
               {/* Photo atelier */}
-              <div className="rounded-2xl overflow-hidden relative h-52 md:h-64 border border-gray-200 shadow-md">
+              <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-md">
                 <Image
                   src="/atelier.png"
                   alt="Technicien Repair Ninja en train de réparer un iPhone à Bastille Paris 4"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  width={1400}
+                  height={788}
+                  className="w-full h-auto object-contain"
                   priority
                 />
               </div>
