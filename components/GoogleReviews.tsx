@@ -101,6 +101,12 @@ export default function GoogleReviews() {
               itemScope
               itemType="https://schema.org/Review"
             >
+              {/* itemReviewed : objet évalué (LocalBusiness) */}
+              <div itemProp="itemReviewed" itemScope itemType="https://schema.org/LocalBusiness">
+                <meta itemProp="name" content="Repair Ninja Bastille" />
+                <meta itemProp="url" content="https://www.reparation-iphone-bastille.fr" />
+              </div>
+
               {/* Header avis */}
               <div className="flex items-center gap-3 mb-4">
                 <div className={`w-10 h-10 ${avatarColors[idx]} text-white rounded-full
@@ -108,8 +114,8 @@ export default function GoogleReviews() {
                   {review.avatar}
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900 text-sm" itemProp="author">
-                    {review.author}
+                  <div className="font-semibold text-gray-900 text-sm" itemProp="author" itemScope itemType="https://schema.org/Person">
+                    <span itemProp="name">{review.author}</span>
                   </div>
                   <div className="text-xs text-gray-400">{review.date}</div>
                 </div>
